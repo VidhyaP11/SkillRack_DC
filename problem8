@@ -1,0 +1,25 @@
+int p=0;
+if(N%2==0)
+{
+for(int i=1;i<=N*2;i++)
+{
+   if(i%2==0)
+  {  
+  a[p]=i;
+  p++;
+   }
+}
+} 
+else
+{
+ for(int i=1;i<=N*2;i++)
+{
+  if(i%2!=0)
+    {
+     a[p]=i;
+     p++;
+     }
+}
+}
+return a;
+}
