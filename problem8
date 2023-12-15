@@ -1,25 +1,97 @@
-int p=0;
-if(N%2==0)
+The program must accept an integer N as the input. The program must remove all the occurrences of N's unit digit in the same integer N, 
+then the program must print the modified integer N as the output. If all the digits of N are the same, the program must print -1 as the output.
+
+Boundary Condition(s): 1 <= N <= 10^18
+
+Input Format: The first line contains N.
+
+Output Format: The first line contains the modified integer N or -1.
+
+Example Input/Output 1:
+
+Input: 121671
+
+Output: 267
+
+Explanation:
+
+The unit digit of 121671 is 1. So all the occurrences of 1 are removed from the integer 121671.
+So the modified integer is 267
+
+Example Input/Output 2:
+
+Input
+Input: 800180708
+
+Output: 1070
+
+Example Input/Output 3:
+
+Input: 333
+
+Output:
+
+-1
+
+SOLUTION:
+     import java.util.*;
+     import class Hello{
+          public statics void main(string[] args){
+               Scanner sc = new Scanner(System.in);
+               string y=sc.nextline();
+               long a=Long.parseLong(y); 
+               long b=a%10;
+               long sum=0,r;
+               long t,s1=0,r1;
+               long u=a%10;
+               long temp=(a/10)%10;
+               long temp1=(a/100)%10;
+               if(temp!=0||a%10==0)
 {
-for(int i=1;i<=N*2;i++)
+                while(a!=0)
 {
-   if(i%2==0)
-  {  
-  a[p]=i;
-  p++;
-   }
+                  r=a%10;
+                  if(r!=b)
+{
+                     sum=sum*10+r;
 }
-} 
+                   a=a/10;
+}
+              t=sum;
+              while(t!=0)
+{
+                  r1=t%10;
+                  S1=s1*10+r1;
+                  t=t/10;
+}}
+              else
+{
+                   while(a!=0)
+{
+                         r=a%10;
+                         if(r!=b)
+{
+                             sum=sum*10+r;
+}
+                          a=a/10;
+}
+              t=sum;
+              while(t!=0)
+{
+                    r1=t%10;
+                    s1=s1*10+r1;
+                    t=t/10;
+}
+              s1=s1*10;
+}
+              if(s1==0 && (u==temp) &&
+              (u==temp1))
+{
+                    system.out.println("-1");
+}
 else
 {
- for(int i=1;i<=N*2;i++)
-{
-  if(i%2!=0)
-    {
-     a[p]=i;
-     p++;
-     }
+                    system.out.println(s1);
 }
 }
-return a;
 }
