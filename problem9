@@ -1,0 +1,60 @@
+The program must accept two odd integers X and Y as the Input. The program must print the desired pattern as 
+shown in the Example Input/Output section.
+
+Boundary Condition(s): 3 <= X, Y <= 99
+
+Input Format:
+
+The first line contains X and Y separated by space.
+
+Output Format:
+
+The first X lines contain the desired pattern as shown in the Example
+Input/Output section. 
+
+Example Input/Output 1:
+
+Input: 55
+
+Output:
+* * * * *
+* 0 * 0 *
+* * * * *
+* 0 * 0 *
+* * * * * 
+Example Input/Output 2:
+
+Input:
+
+35
+
+Output:
+* * * * *
+* 0 * 0 *
+* * * * *
+
+SOLUTION:
+import java.util.*;
+public class Hello{
+   public static void main(String [] args)
+{
+Scanner sc = new Scanner (System.in);
+int a=sc.nextInt();
+int b=sc.nextInt();
+for(int i=0;i<a;i++)
+{
+for(int j=0;j<b;j++)
+{
+if(i%2!=0 && j%2!=0)
+{
+System.out.print("0 ");
+}
+else
+{
+System.out.print("* ");
+}
+}
+System.out.println();
+}
+}
+}
